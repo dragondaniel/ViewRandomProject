@@ -1,0 +1,5 @@
+---
+- hosts: vpn
+    sudo: yes
+      roles:
+      - { role: openvpn, two_fa: True, EASYRSA_REQ_ORG: 'VPN', EASYRSA_REQ_EMAIL: 'dragonlearn88@gmail.com', EASYRSA_REQ_OU: 'VPN' }

@@ -28,8 +28,8 @@
     group="{{ item.group }}"
     groups="{{ item.groups }}"
   with_items: "{{ users_ops }}"
-
-#add key
+  
+#add_user
 - name: add user keys...
   authorized_key:
     user="{{ item.name }}"
