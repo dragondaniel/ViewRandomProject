@@ -1,0 +1,22 @@
+client
+dev tun
+proto udp
+remote vpnhome.ddns.net
+persist-key
+persist-tun
+ca ca.crt
+cert UPDATEME.crt
+key UPDATEME.key
+auth-user-pass
+comp-lzo yes
+nobind
+auth-nocache
+#script-security 2
+reneg-sec 21600
+tls-auth ta.key 1
+#cipher AES-256-CFB8
+cipher AES-256-CBC
+#tls-cipher TLS-DHE-RSA-WITH-AES-256-CBC-SHiA
+tls-cipher TLS-DHE-RSA-WITH-AES-256-GCM-SHA384:TLS-DHE-RSA-WITH-AES-256-CBC-SHA256:TLS-DHE-RSA-WITH-AES-128-GCM-SHA256:TLS-DHE-RSA-WITH-AES-128-CBC-SHA256
+remote-cert-tls server
+auth SHA512
