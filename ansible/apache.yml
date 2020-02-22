@@ -1,0 +1,16 @@
+- hosts: whole enviroment
+  sudo: yes
+  tasks:
+    - name: install apache
+      yum:
+        name: httpd 
+        state: latest
+
+
+#- hosts: whole enviroment
+#  sudo: yes
+#  tasks:
+#    - name: remove apache
+#      yum:
+#        name: httpd
+#        state: absent

@@ -1,0 +1,18 @@
+#
+#ansible-playbook -i inventories/devices/ -e "targethosts=linuxbox package=httpd" choose_package_install.yml
+
+
+- hosts: whole_environment
+  become: yes
+  become_user: root
+  #vars:
+   # package: "{{ package }}"
+
+
+  tasks:
+
+   - name: install chosen package
+     yum:
+        name: "{{ package }}"
+        state: latest
+

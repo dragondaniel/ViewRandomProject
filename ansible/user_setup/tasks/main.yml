@@ -1,0 +1,37 @@
+---
+# tasks file for user_setup
+#
+- name: setup the wheel
+  lineinfile: 
+   path: /etc/sudoers
+   state: "present"
+   regexp: '^%wheel' 
+   line: '%wheel ALL=(ALL) NOPASSWD:ALL'
+   validate: '/usr/sbin/visudo -cf %s'
+
+#add wheel greoup
+- name: Add wheel group
+  group: name="wheel" state="present"
+
+- name: Add dan
+  group: name="dan" state="present"
+
+#add user
+- name: add user  
+  user:
+    name="{{ item.name }}"
+    comment="{{ item.comment }}"
+    shell="/bin/bash"
+    system="no"
+    state="present"
+    createhome="yes"
+    group="{{ item.group }}"
+    groups="{{ item.groups }}"
+  with_items: "{{ users_ops }}"
+
+#add key
+- name: add user keys...
+  authorized_key:
+    user="{{ item.name }}"
+    key="{{ item.userkey }}"
+  with_items: "{{ users_ops }}"

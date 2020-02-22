@@ -1,0 +1,11 @@
+---
+# defaults file for user_setup
+
+
+users_ops:
+  - name: 'dan'     
+    comment: 'E_MAIL/FULLNAME'
+    group: 'dan'
+    groups: 'wheel'
+    userkey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGGauKY9YOFRdolwh8S5Uwlf7bfNU8+KNAyFcmrFIiA1+luLNI65Nj9Ne5omyZF5twc4tGb6RpLKmVkvbgvguu1wOY8YtkL4qxkYkb4tmCQbspnBGNjMECxL+aNBN7CPwScRIEirHfu0bqr03GybsIo4OndUrRggiHEOKityfjU8ix45wTi4bC/9ZWzk06OFV6HEQam3iKw2EPKf0LV3BPdbT4tRhMnzM5djuGWWA084LiE1/q4jI7msCEl8KHlj63n9rALsi390J1FRLCpZ4Eevub8zGW+4o45esk85AmHiGDbcGps0603rTjYVge81tnNkYANz+KpXwgfxkaXyO7 d.choi@reply.com'
+

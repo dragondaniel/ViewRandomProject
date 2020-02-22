@@ -1,0 +1,7 @@
+#setu users
+#
+- hosts: whole_environment
+  become: yes
+  become_user: root
+  roles:
+    - user_setup

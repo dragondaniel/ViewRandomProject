@@ -1,0 +1,6 @@
+---
+# defaults file for packages
+#
+package_list:
+ - name: 'apache'
+   comment: 'httpd'

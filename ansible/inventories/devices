@@ -1,0 +1,19 @@
+##################################################
+# spar DEVICES
+##################################################
+# devices are used to define hosts
+
+linux-box ansible_ssh_host=10.0.2.4
+
+
+
+
+
+[linux]
+linux-box
+
+[zabbix]
+
+[whole_environment:children]
+linux
+zabbix
