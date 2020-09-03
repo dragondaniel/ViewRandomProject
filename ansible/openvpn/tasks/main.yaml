@@ -1,4 +1,4 @@
-- name: "upadte"
+- name: "update"
   shell: yum install update -y
 
 - name: "EPEL2"
@@ -25,6 +25,7 @@
   - bind-utils
   - nc
   - mtr
+  - easy-rsa
   when: ansible_distribution == 'CentOS'
 
 - name: "Create User"
