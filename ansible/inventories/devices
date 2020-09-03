@@ -8,11 +8,14 @@ linux-hole ansible_ssh_host=192.168.0.9
 test-node ansibel_ssh_host=192.168.0.3
 
 
+[vpn]
+linux-vpn
 
-
+[apache]
+test-node
 
 [linux]
-linux-box
+#linux-box
 linux-hole
 
 [test]
