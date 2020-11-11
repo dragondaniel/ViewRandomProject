@@ -10,7 +10,7 @@ fi
 
 useradd -m "$username"
 
-cd /etc/openvpn/easyrsa3
+cd /etc/openvpn/easyrsa
 
 ./easyrsa build-client-full "$username" nopass
 
