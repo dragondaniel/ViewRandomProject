@@ -182,6 +182,10 @@
   shell: >
     cp /etc/openvpn/easyrsa/pki/private/ta.key /etc/skel
 
+- name: "create group"
+  shell: >
+    groupadd nogroup
+
 - name: "Tar a client config up"
   shell: >
     tar -pczvf client.tar.gz client.ovpn easyrsa/pki/ca.crt easyrsa/pki/issued/client.crt easyrsa/pki/private/client.key easyrsa/pki/private/ta.key
