@@ -1,5 +1,5 @@
 ---
 - hosts: vpn
-    sudo: yes
-      roles:
-      - { role: openvpn, two_fa: True, EASYRSA_ORG: 'VPN', EASYRSA_EMAIL: 'dragonlearn88@gmail.com', EASYRSA_OU: 'VPN' }
+  become: yes
+  roles:
+    - { role: openvpn, two_fa: True, EASYRSA_ORG: 'VPN', EASYRSA_EMAIL: 'dragonlearn88@gmail.com', EASYRSA_OU: 'VPN' }
