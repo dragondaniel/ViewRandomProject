@@ -6,7 +6,7 @@ local 192.168.8.8
 #plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so openvpn
 
 {% if two_fa is defined %}
-plugin /usr/lib64/openvpn/plugin/lib/openvpn-auth-pam.so openvpn
+plugin /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so openvpn
 {% endif %}
 
 
@@ -42,7 +42,7 @@ group nogroup
 server 10.8.0.0 255.255.255.0
 #topology subnet
 ifconfig-pool-persist ipp.txt
-client-config-dir ccd
+client-config-dir /etc/openvpn/ccd
 
 # Misc
 persist-key
