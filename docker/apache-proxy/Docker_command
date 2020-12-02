@@ -1,0 +1,14 @@
+#Example commands for docker:
+
+curl -x http://localhost:8080/ www.google.com
+sudo docker build -t p-apache .
+sudo docker run -dit --name my-running-apache -p 8080:80 p-apache
+
+
+sudo docker container stop my-running-apache
+sudo docker container rm my-running-apache
+sudo docker images
+sudo docker image rm sudo docker images| grep p-apache| awk '{print $3}'
+
+
+sudo docker exec -it my-running-apache bash
