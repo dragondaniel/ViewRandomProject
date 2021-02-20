@@ -1,0 +1,8 @@
+#######################
+####Docker commands####
+#######################
+
+
+#docker create --name nginx-base -p 80:80 nginx:alpine
+#docker start nginx-base
+
