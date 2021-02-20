@@ -6,3 +6,5 @@
 #docker create --name nginx-base -p 80:80 nginx:alpine
 #docker start nginx-base
 
+#logs
+sudo docker logs {container ID}
